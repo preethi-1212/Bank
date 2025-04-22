@@ -16,14 +16,14 @@ import com.Bank.Service.BankService;
 public class BankController {
 @Autowired
 BankService bs;
-@PostMapping(value="/postAll")
+@PostMapping(value="/postObject")
 public List<Bank> postAll(@RequestBody List<Bank> b)
 {
 	return bs.postAll(b);
 }
-@GetMapping(value="/getBranchByIfsc/{n}")
-public String getBranch(@PathVariable String n)
+@GetMapping(value="/getIFSC/{n}")
+public String getBranch(@PathVariable String a)
 {
-return bs.getBranch(n);
+return bs.getBranch(a);
 }
 }
